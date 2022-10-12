@@ -14,39 +14,31 @@ class myApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
-            //mainAxisSize: MainAxisSize.max,
-            //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            //crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Container(
-                color: Colors.red,
-                height: 650,
-                width: 100,
+            child: Column(
+          children: [
+            CircleAvatar(
+              radius: 50.0,
+              backgroundImage: AssetImage('images/saurav.jpg'),
+            ),
+            Text(
+              'Saurav Sunar',
+              style: TextStyle(
+                fontFamily: 'Pacifico',
+                fontSize: 40.0,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
               ),
-              Container(
-                color: Colors.teal,
-                height: 90,
-                width: 190,
-                child: Row(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.fromLTRB(45, 0, 0, 0),
-                      width: 100,
-                      height: 100,
-                      color: Colors.yellow,
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                color: Colors.blue,
-                height: 650,
-                width: 100,
-              ),
-            ],
-          ),
-        ),
+            ),
+            Text(
+              'Software Developer',
+              style: TextStyle(
+                  color: Colors.teal[100],
+                  fontFamily: 'Source Sans Pro',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold),
+            )
+          ],
+        )),
       ),
     );
   }
